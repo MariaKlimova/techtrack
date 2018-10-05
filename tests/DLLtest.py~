@@ -1,0 +1,24 @@
+#!/home/maria/quack/venv/bin/python
+import unittest
+import sys
+sys.path.insert(0,"/home/maria/quack/app")
+
+from DLL import DoubleLinkedListCell
+from DLL import DoubleLinkedList
+
+
+class TestDLL(unittest.TestCase):
+    def test_push_give1(self):
+        my = DoubleLinkedList();
+        my.push(99)
+        self.assertEqual(my.give(0), 99)
+        my.push('ninety nine')
+        self.assertEqual(my.give(1), 'ninety nine')
+        self.assertEqual(my.give(0), 99)
+
+
+
+
+if __name__ == '__main__':
+    unittest.main()
+
